@@ -21,10 +21,7 @@ public class Utils {
             int cod = jsonObj.getInt("codigo");
             String materia = jsonObj.getString("nome");
 
-
-            Disciplina pessoa = new Disciplina(cod, materia);
-
-            return pessoa;
+            return new Disciplina(cod, materia);
         } catch (JSONException e) {
             throw e;
         }

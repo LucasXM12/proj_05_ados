@@ -4,7 +4,7 @@ import android.support.annotation.*;
 
 public class Disciplina {
     protected int cod;
-    protected String materia;
+    protected String nome;
 
     public int getCod() {
         return this.cod;
@@ -14,28 +14,28 @@ public class Disciplina {
         this.cod = cod;
     }
 
-    public String getMateria() {
-        return this.materia;
+    public String getNome() {
+        return this.nome;
     }
 
-    public void setMateria(@NonNull String materia) {
-        this.materia = materia;
+    public void setNome(@NonNull String nome) {
+        this.nome = nome;
     }
 
-    public Disciplina(@IntRange(from = 1) int cod, @NonNull String materia) {
+    public Disciplina(@IntRange(from = 1) int cod, @NonNull String nome) {
         this.cod = cod;
-        this.materia = materia;
+        this.nome = nome;
     }
 
     @Override
     public String toString() {
-        return "Disciplina{" + "cod=" + this.cod + ", materia='" + this.materia + '\'' + '}';
+        return "Disciplina{" + "cod=" + this.cod + ", nome='" + this.nome + '\'' + '}';
     }
 
     @Override
     public int hashCode() {
         int ret = this.cod;
-        ret = 13 * ret + this.materia.hashCode();
+        ret = 13 * ret + this.nome.hashCode();
 
         return ret;
     }
