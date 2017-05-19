@@ -21,6 +21,7 @@
         android:fontFamily="sans-serif-medium" />
 
     <TextView
+        android:text="Código:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
@@ -28,18 +29,16 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="55dp"
         android:id="@+id/textView2"
-        tools:text="Código:"
         android:textSize="24sp" />
 
     <TextView
-        android:text="TextView"
+        android:text="Nome:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
         android:layout_alignStart="@+id/textView2"
         android:layout_marginTop="21dp"
         android:id="@+id/textView3"
-        tools:text="Nome:"
         android:textSize="24sp" />
 
     <EditText
@@ -62,5 +61,15 @@
         android:layout_alignBottom="@+id/textView3"
         android:layout_alignParentEnd="true" />
 
+    <Button
+        android:text="Recuperar informações"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnIr"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
+
+<!-- 9123 -->
 

@@ -3,14 +3,14 @@ package com.ados.cotuca.proj_05_ados.tools;
 import android.support.annotation.*;
 
 public class Disciplina {
-    protected int cod;
+    protected Integer cod;
     protected String nome;
 
-    public int getCod() {
+    public Integer getCod() {
         return this.cod;
     }
 
-    public void setCod(@IntRange(from = 1) int cod) {
+    public void setCod(@IntRange(from = 1) Integer cod) {
         this.cod = cod;
     }
 
@@ -38,5 +38,15 @@ public class Disciplina {
         ret = 13 * ret + this.nome.hashCode();
 
         return ret;
+    }
+
+    @Override
+    public Object clone() {
+        return new Disciplina(this);
+    }
+
+    protected Disciplina(Disciplina disciplina) {
+        this.cod = disciplina.cod;
+        this.nome = disciplina.nome;
     }
 }
